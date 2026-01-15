@@ -1,7 +1,13 @@
+html{
+    height: 100%;
+}
+
+
 body{
     background-color: black;
     padding: 0px;
     margin: 0px;
+    height: 100%;
 }
 
 p{
@@ -10,30 +16,84 @@ p{
     color: white;
 }
 
-.taskbar{
+.titleBar{
     background-color: red;
     margin-top:0px;
     padding-top:0px;
-    /* position: fixed; */
-    /* top:0;
-    left:0;
-    width:100%;
-    height:5%;
-    z-index:1000; */
+    height: 15vh;
 }
+
+.navigateBox{
+    background-color:pink;
+    width: 8vh;
+    height: 8vh;
+    margin: 1vh;
+    position: fixed;
+}
+
+
 
 .aboutMe{
     background-color: blue;
+    height: 65vh;
+    display:flex;
 }
+
+.pictureContainer{
+    width: 40%;
+    background-color: orange;
+}
+
+.photoCircle{
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+    border-radius: 50%;
+    background-color:brown;
+}
+
+
+
+.textContainer{
+    width: 60%;
+    height: 100%;
+    position: relative;
+}
+
+.textContainer::before{
+    content:"";
+    position:absolute;
+    inset: 0;
+    background-color:black;
+    clip-path: polygon(17% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.textContainer::after{
+    content:"";
+    position:absolute;
+    inset: 4px;
+    background-color:green;
+    clip-path: polygon(17% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+
 
 .projectLine{
     background-color: yellow;
+    height: 70vh;
 }
+
+
+
+
 
 .timeline{
     background-color:green;
+    height: 60vh;
 }
 
 .contactMe{
     background-color:brown;
+    height: 12vh;
 }
+
